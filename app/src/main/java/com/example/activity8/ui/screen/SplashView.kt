@@ -20,9 +20,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.activity8.R
 
-@Preview(showBackground = true)
 @Composable
-fun SplashView() {
+fun SplashView(onMulaiButton: () -> Unit) {
     Column(modifier = Modifier
         .fillMaxSize()
         .background(color = colorResource(R.color.primary)),
@@ -34,7 +33,7 @@ fun SplashView() {
         )
         Spacer(modifier = Modifier.padding(16.dp))
         Button(
-            onClick = {}
+            onClick = { onMulaiButton() }
         ) {
             Text("Mulai")
         }
